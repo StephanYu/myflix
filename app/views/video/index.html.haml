@@ -1,0 +1,22 @@
+
+%article.video_category
+  %header
+    %h3= link_to "TV Comedies"
+  .videos.row
+    - @videos.each do |video|
+      .video.col-sm-2
+        %img(src="#{video.small_cover_url}")
+%article.video_category
+  %header
+    %h3= link_to "TV Dramas"
+  .videos.row
+    - @videos.each do |video|
+      .video.col-sm-2
+        %img(src="#{video.small_cover_url}")
+%article.video_category
+  %header
+    %h3= link_to "Reality TV"
+  .videos.row
+    - @videos.each do |video|
+      .video.col-sm-2
+        %img(src="#{video.small_cover_url}")
