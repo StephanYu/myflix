@@ -1,9 +1,7 @@
 class VideoController < ApplicationController
-  def index
-    @videos = Video.all
+  
+  def show
+    @video = Video.find(params[:id])
   end
 
-  def show
-    @video = Video.all.sample
-  end
 end
