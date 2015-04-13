@@ -1,6 +1,6 @@
 %section.genre
   %header.clearfix
-    %h1 #{@category.name.capitalize}
+    %h3 #{@category.name.capitalize}
   %article.row
     - @videos.each do |video|
       - if video.category.name == @category.name
