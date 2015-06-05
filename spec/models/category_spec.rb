@@ -4,7 +4,7 @@ describe Category do
   it { should have_many(:videos) }
 
   describe '#recent_videos' do
-    it 'should return an array of all videos if the total number is less than six' do
+    it 'returns an array of all videos if the total number is less than six' do
       category = Category.create(name: "Action")
       Video.create(title: "Fury", description:"A War movie.", category: category)
       Video.create(title: "Big Hero", description:"A Hero movie.", category: category)
@@ -12,7 +12,7 @@ describe Category do
       expect(category.recent_videos.count).to eq(3)
     end
 
-    it 'should return an array of six videos if the total number of videos is at least six' do
+    it 'returns an array of six videos if the total number of videos is at least six' do
       category = Category.create(name: "Action")
       7.times { Video.create(title: "test", description: "video", category: category) }
       expect(category.recent_videos.count).to eq(6)
